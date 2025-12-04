@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Venado Cola Blanca - Información Completa</title>
+
+    <!-- TAILWIND -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .primary-button {
+            background-color: #059669;
+            transition: 0.3s;
+        }
+        .primary-button:hover {
+            background-color: #047857;
+        }
+        .bg-emerald-light {
+            background-color: #a7f3d0;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 text-gray-800 tracking-wide">
+
+    <!-- HEADER -->
+    <header class="bg-emerald-600 text-white py-6 shadow-xl">
+        <h1 class="text-center text-4xl font-bold uppercase">Venado Cola Blanca</h1>
+        <p class="text-center text-lg mt-2">Odocoileus virginianus</p>
+    </header>
+
+    <main class="max-w-5xl mx-auto p-6 space-y-12">
+
+        <!-- DESCRIPCIÓN -->
+        <section class="space-y-4">
+            <h2 class="text-3xl font-semibold border-b-4 border-emerald-500 pb-1">Descripción General</h2>
+            <p>El venado cola blanca (Odocoileus virginianus) es un cérvido de tamaño mediano, de pelaje castaño rojizo o grisáceo, que se caracteriza por su larga cola que es blanca en la parte inferior. Habita en diversos ecosistemas de América, desde el sur de Canadá hasta el norte de Sudamérica. Los machos tienen astas, que mudan y les crecen anualmente, y pueden alcanzar un tamaño considerable, mientras que los cervatillos presentan manchas blancas en el pelaje. </p>
+
+            <img src="https://www.gob.mx/cms/uploads/article/main_image/75871/17861818_1311157518938803_5192662973946597958_nnevado_1VEANDO_COLA_BLANCA_.jpg"
+                 class="w-full rounded-lg shadow-lg" alt="Venado en pradera">
+        </section>
+
+
+        <!-- CICLO ANUAL -->
+        <section class="space-y-6">
+            <h2 class="text-3xl font-semibold border-b-4 border-emerald-500 pb-1">
+                Ciclo Anual del Venado
+            </h2>
+
+      
+                <!-- CICLO ANUAL INTERACTIVO -->
+                <section id="ciclo-anual" class="space-y-6 bg-emerald-light p-6 rounded-xl border border-emerald">
+                    <h2 class="text-3xl font-semibold text-gray-800 border-b-4 border-emerald pb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-calendar-alt color-emerald"></i>
+                        Ciclo Anual Interactivo
+                    </h2>
+                    <p class="text-gray-700 text-md">Explora los eventos biológicos clave a lo largo del año. Haz clic en un mes para detalles.</p>
+
+                    <!-- Timeline de Meses -->
+                    <div class="grid grid-cols-4 md:grid-cols-6 lg:grid-cols-12 gap-2">
+                        <!-- Enero a Diciembre (Estilo mejorado con hover) -->
+                        <div id="m-1" class="timeline-step p-2 text-center rounded-lg bg-white border border-gray-300 text-gray-700 hover-emerald" onclick="updateCycleInfo(1)">Ene</div>
+                        <div id="m-2" class="timeline-step p-2 text-center rounded-lg bg-white border border-gray-300 text-gray-700 hover-emerald" onclick="updateCycleInfo(2)">Feb</div>
+                        <div id="m-3" class="timeline-step p-2 text-center rounded-lg bg-white border border-gray-300 text-gray-700 hover-emerald" onclick="updateCycleInfo(3)">Mar</div>
+                        <div id="m-4" class="timeline-step p-2 text-center rounded-lg bg-white border border-gray-300 text-gray-700 hover-emerald" onclick="updateCycleInfo(4)">Abr</div>
+                        <div id="m-5" class="timeline-step p-2 text-center rounded-lg bg-white border border-gray-300 text-gray-700 hover-emerald" onclick="updateCycleInfo(5)">May</div>
+                        <div id="m-6" class="timeline-step p-2 text-center rounded-lg bg-white border border-gray-300 text-gray-700 hover-emerald" onclick="updateCycleInfo(6)">Jun</div>
+                        <div id="m-7" class="timeline-step p-2 text-center rounded-lg bg-white border border-gray-300 text-gray-700 hover-emerald" onclick="updateCycleInfo(7)">Jul</div>
+                        <div id="m-8" class="timeline-step p-2 text-center rounded-lg bg-white border border-gray-300 text-gray-700 hover-emerald" onclick="updateCycleInfo(8)">Ago</div>
+                        <div id="m-9" class="timeline-step p-2 text-center rounded-lg bg-white border border-gray-300 text-gray-700 hover-emerald" onclick="updateCycleInfo(9)">Sep</div>
+                        <div id="m-10" class="timeline-step p-2 text-center rounded-lg bg-white border border-gray-300 text-gray-700 hover-emerald" onclick="updateCycleInfo(10)">Oct</div>
+                        <div id="m-11" class="timeline-step p-2 text-center rounded-lg bg-white border border-gray-300 text-gray-700 hover-emerald" onclick="updateCycleInfo(11)">Nov</div>
+                        <div id="m-12" class="timeline-step p-2 text-center rounded-lg bg-white border border-gray-300 text-gray-700 hover-emerald" onclick="updateCycleInfo(12)">Dic</div>
+                    </div>
+
+            <!-- INFO MOSTRADA -->
+            <div class="bg-white rounded-lg shadow p-6">
+                <h3 id="cycle-title" class="text-2xl font-bold">Selecciona un mes</h3>
+                <p id="cycle-description" class="mt-2 text-gray-700">Haz clic en cualquiera de los meses para ver la información correspondiente.</p>
+            </div>
+        </section>
+
+
+        <!-- GALERÍA -->
+        <section class="space-y-6">
+            <h2 class="text-3xl font-semibold border-b-4 border-emerald-500 pb-1">Galería</h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRERfWM5ByDnNpfwzS9KQa3AM1o8IGoRWxMkW-giWBFsw&s=10"
+                     class="rounded-lg shadow-lg" alt="Venado en bosque">
+
+                <img src="https://thumbs.dreamstime.com/b/alerta-de-peligro-para-venados-j%C3%B3venes-con-cola-blanca-cierre-ciervo-blanco-odocoileus-virginianus-en-pradera-mirando-la-c%C3%A1mara-238014402.jpg"
+                     class="rounded-lg shadow-lg" alt="Venado alerta">
+
+                <img src="https://previews.123rf.com/images/mybaitshop/mybaitshop1402/mybaitshop140200685/25989239-huge-group-of-whitetail-deer-does-all-bunched-together-eating-corn.jpg"
+                     class="rounded-lg shadow-lg" alt="Grupo de venados">
+
+                <img src="https://previews.123rf.com/images/mariedaloia/mariedaloia1210/mariedaloia121000049/15689907-a-young-white-tailed-deer-standing-in-shady-woodland-in-maryland-during-the-autumn.jpg"
+                     class="rounded-lg shadow-lg" alt="Venado en pradera 2">
+            </div>
+        </section>
+
+
+        
+
+    <!-- SCRIPT COMPLETO -->
+    <script>
+    const cycleData = {
+        1:{title:"Enero – Bajas Actividades y Ahorro Energético",description:"En este mes los venados muestran muy poca actividad. El clima frío y la falta de alimento los obliga a ahorrar la mayor cantidad de energía posible. Suelen permanecer cerca de zonas de refugio, moverse solo cuando es necesario y alimentarse de ramas secas o hojas que aún encuentren disponibles."},
+        2:{title:"Febrero – Final del Invierno",description:"Continúan en un ritmo lento. Los machos siguen recuperándose del desgaste que tuvieron durante la época de apareamiento. Este mes todavía hay poca comida, por lo que buscan cualquier fuente disponible, incluso de baja calidad. Evitan gastar energía y mantienen movimientos cortos."},
+        3:{title:"Marzo – Brotes Nuevos",description:"Con la llegada de temperaturas más suaves, aumenta un poco su actividad. Empiezan a encontrar brotes nuevos y plantas tiernas que les permiten recuperar energía. Las hembras embarazadas comienzan a alimentarse más para preparar el final de su gestación."},
+        4:{title:"Abril – Actividad Creciente",description:"Los venados cambian su pelaje grueso de invierno por uno más delgado de verano. Los machos inician el crecimiento de sus nuevas astas, que en esta etapa están cubiertas de terciopelo. Hay más alimento disponible y se les ve más activos."},
+        5:{title:"Mayo – Nacimiento de Crías",description:"La vegetación es abundante, por lo que comen bastante. Las hembras buscan lugares tranquilos y protegidos para prepararse a parir. Los machos siguen desarrollando astas rápidamente y se mantienen alejados de conflictos."},
+        6:{title:"Junio – Lactancia",description:"Es el mes en que nacen la mayoría de los cervatillos. Las madres los esconden entre la vegetación para protegerlos de depredadores y regresan cada pocas horas para amamantarlos. Los machos continúan comiendo mucho para fortalecer su cuerpo."},
+        7:{title:"Julio – Abundancia",description:"Los cervatillos ya comienzan a caminar más y a seguir a sus madres, pero aún dependen de ellas. Los venados en general se mantienen activos al amanecer y al atardecer para evitar el calor. Las astas de los machos siguen creciendo y se ven más grandes."},
+        8:{title:"Agosto – Pre-celo",description:"Los venados comienzan a acumular energía y grasa para prepararse para el otoño y el futuro invierno. Se alimentan con frecuencia de hojas, frutos y plantas tiernas. La actividad se mantiene alta, especialmente durante las horas frescas del día."},
+        9:{title:"Septiembre – Rut Preparativo",description:"Los machos empiezan a marcar territorio, frotando sus astas en árboles y dejando olor. También comienzan las primeras competencias entre ellos. Este es el inicio del periodo previo al apareamiento, por lo que se muestran más inquietos."},
+        10:{title:"Octubre – Temporada de Celo",description:"La temporada de apareamiento está en su punto fuerte. Los machos están muy activos, buscan hembras y compiten con otros machos. Pueden recorrer grandes distancias y gastar mucha energía. Las hembras comienzan a entrar en celo."},
+        11:{title:"Noviembre – Máximo del Celo",description:"Continúa la época reproductiva. Los machos siguen muy atentos a las hembras, incluso descuidando su alimentación. La actividad es alta y se observa más movimiento durante el día. Las hembras se aparean en este periodo."},
+        12:{title:"Diciembre – Recuperación",description:"El rut llega a su fin y los machos quedan agotados y con menos reservas de grasa. Para recuperarse vuelven a reducir su actividad y buscan descansar mientras encuentran alimento. Comienzan nuevamente un periodo de ahorro de energía para enfrentar el frío."}
+    };
+
+    function updateCycleInfo(month){
+        document.getElementById("cycle-title").textContent = cycleData[month].title;
+        document.getElementById("cycle-description").textContent = cycleData[month].description;
+
+        document.querySelectorAll(".timeline-step")
+            .forEach(step => step.classList.remove("bg-emerald-light","font-bold"));
+
+        document.getElementById(`m-${month}`).classList.add("bg-emerald-light","font-bold");
+    }
+
+    function playAudio(url){
+        const player = document.getElementById("audio-player");
+        player.src = url;
+        player.play();
+    }
+    </script>
+
+</body>
+</html>
